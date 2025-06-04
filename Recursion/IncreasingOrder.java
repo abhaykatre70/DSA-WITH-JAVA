@@ -1,14 +1,14 @@
-public class IncreasingOrder{
-    public static void print(int i,int n) {
-        
-        if(i==n){
-            System.out.print(i);
+// Print Number form 1 to n in increasing Order
+public class IncreasingOrder {
+    public static void print(int n) {
+        if (n == 1) {
+            System.out.print(n + " ");
             return;
         }
-        System.out.print(i+" ");
-        print(i+1,n);
+        print(n - 1);
+        System.out.print(n + " ");
     }
     public static void main(String[] args) {
-        print(1,10);
+        print(10);
     }
 }
