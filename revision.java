@@ -1,13 +1,11 @@
 
-
 public class revision {
 
     static public void main(String[] args) {
-       
+
         //switch
         // int day = 5;
         // String dayString;
-
         // dayString = switch (day) {
         //     case 1 -> "Monday";
         //     case 2 -> "Tuesday";
@@ -19,7 +17,6 @@ public class revision {
         //     default -> "Invalid day";
         // }; 
         // System.out.println(dayString);
-        
         //prime number
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter number : ");
@@ -41,9 +38,6 @@ public class revision {
         // }else{
         //     System.out.println("Not prime");
         // }
-        
-
-
         //fibonacci series
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter number: ");
@@ -66,9 +60,6 @@ public class revision {
         //         System.out.print(b + " ");
         //     }
         // }
-
-
-
         // //Count Occurrences
         // int n=103330343;
         // int temp=n;
@@ -81,9 +72,6 @@ public class revision {
         //     temp/=10;
         // }
         // System.out.println(Count);
-
-
-
         //reverse number
         // int n=103827327;
         // int rev=0;
@@ -93,5 +81,25 @@ public class revision {
         //     n/=10;
         // }
         // System.out.println(rev);
+        // int[] arr={1,3,5,3,4};
+        // System.out.println(Arrays.toString(arr));
+        //Armstrong Num
+        for(int i=100;i<=1000;i++){
+            if(isArmstrong(i)){
+                System.out.print(i+" ");
+            }
+        }
+
+    }
+
+    static boolean isArmstrong(int num) {
+        int original = num;
+        int sum = 0;
+        while (num > 0) {
+            int rem = num % 10;
+            sum += rem * rem * rem;
+            num /= 10;
+        }
+        return original==sum;
     }
 }
