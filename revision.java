@@ -220,6 +220,7 @@ public class revision {
             }
             System.out.println();       
         }
+        
     }
 
     // static boolean isArmstrong(int num) {
