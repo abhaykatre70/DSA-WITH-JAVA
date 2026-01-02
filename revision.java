@@ -1,4 +1,6 @@
 
+
+
 public class revision {
 
     static public void main(String[] args) {
@@ -60,6 +62,17 @@ public class revision {
         //         System.out.print(b + " ");
         //     }
         // }
+        // int a=0;
+        // int b=1;
+        // int count=2;
+        // int n=4;
+        // while(count<=n){
+        //     int temp=b;
+        //     b=a+b;
+        //     a=temp;
+        //     count++;
+        // }
+        // System.out.println(b);
         // //Count Occurrences
         // int n=103330343;
         // int temp=n;
@@ -84,22 +97,139 @@ public class revision {
         // int[] arr={1,3,5,3,4};
         // System.out.println(Arrays.toString(arr));
         //Armstrong Num
-        for(int i=100;i<=1000;i++){
-            if(isArmstrong(i)){
-                System.out.print(i+" ");
+        // for(int i=100;i<=1000;i++){
+        //     if(isArmstrong(i)){
+        //         System.out.print(i+" ");
+        //     }
+        // }
+        
+        
+        //Patterns
+        // 1
+        // int n=5;
+        // for(int i=0;i<n;i++){
+        //     for(int j=0;j<=i;j++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        // }
+        //2
+        // int n=5;
+        // for(int i=0;i<n;i++){
+        //     for(int j=0;j<n-i;j++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        // }
+
+        //3
+        // char ch='A';
+        // for (int i = 0; i < 4; i++) {
+        //     for(int j=0;j<=i;j++){
+        //         System.out.print(ch);
+        //         ch++;
+        //     }
+        //     System.out.println();
+        // }
+      
+        //4 Square Hollow Pattern
+        // int n=4;
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j <= n; j++) {
+        //         if(i==0 || j==0 || i==n-1 || j==n){
+        //             System.out.print("*");
+        //         }else{
+        //             System.out.print(" ");    
+        //         }
+                
+        //     }
+        //     System.out.println("");
+        // }
+
+        //5 Number Triangle Pattern
+        // int n=6;
+        // int count=1;
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j < n-i; j++) {
+        //         System.err.print(" ");
+        //     }
+        //     for (int j = 0; j <= i;j++) {
+        //         System.out.print(count+" ");
+        //     }
+           
+        //     count++;
+        //     System.out.println("");
+        // }
+
+        //Number-Increasing Pyramid Pattern
+        // int n=6;
+        // for (int i = 0; i < n; i++) {
+        //     int count=1;
+        //     for (int j = 0; j <= i;j++) {
+        //         System.out.print(count+" ");
+        //         count++;
+        //     }
+        //     System.out.println("");
+        // }
+
+        //Number-Increasing Reverse Pyramid Pattern 
+        // int n=6;
+        // for (int i = 0; i < n; i++) {
+        //     int count=1;
+        //     for (int j = 0; j < n-i;j++) {
+        //         System.out.print(count+" ");
+        //         count++;
+        //     }
+        //     System.out.println("");
+        // }
+        
+        //Number-Changing Pyramid Pattern
+        // int n=6;
+        // int count=1;
+        // for(int i=0;i<n;i++){
+        //     for(int j=0;j<=i;j++){
+        //         System.out.print(count +" ");
+        //         count++;
+        //     }
+        //     System.out.println();
+        // }
+
+        // int n=6;
+        // for(int i=1;i<=n;i++){
+        //     for(int j=1;j<=i;j++){
+        //         if((i+j)%2==0){
+        //             System.out.print(1+" ");
+        //         }else{
+        //             System.out.print(0+" ");
+        //         }
+        //     }
+        //     System.out.println();
+        // }
+
+        //Palindrome Triangle Pattern
+        int n=6;
+        for (int i = 1; i <= n; i++) {
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
             }
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();       
         }
-
     }
 
-    static boolean isArmstrong(int num) {
-        int original = num;
-        int sum = 0;
-        while (num > 0) {
-            int rem = num % 10;
-            sum += rem * rem * rem;
-            num /= 10;
-        }
-        return original==sum;
-    }
+    // static boolean isArmstrong(int num) {
+    //     int original = num;
+    //     int sum = 0;
+    //     while (num > 0) {
+    //         int rem = num % 10;
+    //         sum += rem * rem * rem;
+    //         num /= 10;
+    //     }
+    //     return original==sum;
+    // }
 }
