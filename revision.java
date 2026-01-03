@@ -423,17 +423,34 @@ public class revision {
         // }
 
         // The Number Pattern
-        int n=4;
-        for (int i = 0; i < 2*n-1; i++) {
-            for (int j = 0; j < 2*n-1; j++) {
-                int top=i;
-                int left=j;
-                int bottom=2*n-2-i;
-                int right=2*n-2-j;
-                int minIndex=Math.min(Math.min(top,bottom),Math.min(left,right));
-                System.out.print(n-minIndex+" ");
+        // int n=4;
+        // for (int i = 0; i < 2*n-1; i++) {
+        //     for (int j = 0; j < 2*n-1; j++) {
+        //         int top=i;
+        //         int left=j;
+        //         int bottom=2*n-2-i;
+        //         int right=2*n-2-j;
+        //         int minIndex=Math.min(Math.min(top,bottom),Math.min(left,right));
+        //         System.out.print(n-minIndex+" ");
+        //     }
+        //     System.out.println("");
+        // } 
+
+        //GCD or HCF
+        int a=15,b=20;
+        int n1=a,n2=b;
+        while(a>0 && b>0){
+            if(a>b){
+                a=a%b;
+            }else{
+                b=b%a;
             }
-            System.out.println("");
-        } 
+        }
+        if(a==0){
+            System.out.println("GCD of " + n1 + " and " + n2 + " is: " + b);
+        }else{
+            System.out.println("GCD of " + n1 + " and " + n2 + " is: " + a);
+        }
+
     }
 }
