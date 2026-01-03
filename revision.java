@@ -1,4 +1,6 @@
 
+
+
 public class revision {
 
     static public void main(String[] args) {
@@ -372,7 +374,6 @@ public class revision {
         //     }
         //     System.out.println("");
         // }
-
         //Hollow Hourglass Pattern
         // int n = 6;
         // for (int i = n ; i >= 1; i--) {
@@ -401,21 +402,17 @@ public class revision {
         //     }
         //     System.out.println("");
         // }
-
         //pascal's triangle
         /*    1 
              1 1
             1 2 1
            1 3 3 1
           1 4 6 4 1
-        */
- 
-    
+         */
         // int n=7;
         // for(int i=1;i<=n;i++){
         //     for (int j = 1; j <=n-i; j++) {
         //         System.out.print(" ");
-                
         //     }
         //     int x=1;
         //     for (int j = 1; j <= i; j++){
@@ -425,5 +422,18 @@ public class revision {
         //     System.out.println("");
         // }
 
+        // The Number Pattern
+        int n=4;
+        for (int i = 0; i < 2*n-1; i++) {
+            for (int j = 0; j < 2*n-1; j++) {
+                int top=i;
+                int left=j;
+                int bottom=2*n-2-i;
+                int right=2*n-2-j;
+                int minIndex=Math.min(Math.min(top,bottom),Math.min(left,right));
+                System.out.print(n-minIndex+" ");
+            }
+            System.out.println("");
+        } 
     }
 }
