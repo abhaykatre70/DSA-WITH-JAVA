@@ -437,20 +437,29 @@ public class revision {
         // } 
 
         //GCD or HCF
-        int a=15,b=20;
-        int n1=a,n2=b;
-        while(a>0 && b>0){
-            if(a>b){
-                a=a%b;
-            }else{
-                b=b%a;
-            }
+        // int a=15,b=20;
+        // int n1=a,n2=b;
+        // while(a>0 && b>0){
+        //     if(a>b){
+        //         a=a%b;
+        //     }else{
+        //         b=b%a;
+        //     }
+        // }
+        // if(a==0){
+        //     System.out.println("GCD of " + n1 + " and " + n2 + " is: " + b);
+        // }else{
+        //     System.out.println("GCD of " + n1 + " and " + n2 + " is: " + a);
+        // }
+        //Armstrong
+        int n=153;
+        int temp=n;
+        int sum=0;
+        int len=String.valueOf(n).length(); //calculate length of number
+        while(temp>0){
+            sum+=(int)Math.pow(temp%10,len);
+            temp/=10;
         }
-        if(a==0){
-            System.out.println("GCD of " + n1 + " and " + n2 + " is: " + b);
-        }else{
-            System.out.println("GCD of " + n1 + " and " + n2 + " is: " + a);
-        }
-
+        System.out.println("is Armstrong : "+(n==sum));
     }
 }
