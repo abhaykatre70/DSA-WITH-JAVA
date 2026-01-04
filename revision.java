@@ -452,14 +452,25 @@ public class revision {
         //     System.out.println("GCD of " + n1 + " and " + n2 + " is: " + a);
         // }
         //Armstrong
-        int n=153;
-        int temp=n;
-        int sum=0;
-        int len=String.valueOf(n).length(); //calculate length of number
-        while(temp>0){
-            sum+=(int)Math.pow(temp%10,len);
-            temp/=10;
+        // int n=153;
+        // int temp=n;
+        // int sum=0;
+        // int len=String.valueOf(n).length(); //calculate length of number
+        // while(temp>0){
+        //     sum+=(int)Math.pow(temp%10,len);
+        //     temp/=10;
+        // }
+        // System.out.println("is Armstrong : "+(n==sum));
+        
+        Print all Divisors of a given Number
+        int n=36;
+        for (int i = 1; i*i <= n; i++) {
+            if(n%i==0){
+                System.out.print(i+" ");
+                if(i!=n/i){
+                    System.out.print(n/i+" ");
+                }
+            }
         }
-        System.out.println("is Armstrong : "+(n==sum));
     }
 }
