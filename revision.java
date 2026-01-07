@@ -1,4 +1,6 @@
 
+
+
 public class revision {
 
     static public void main(String[] args) {
@@ -542,5 +544,37 @@ public class revision {
         
         // }
         // System.out.println("Max sum:"+max);
+
+        //Trapping water
+        // int height[]={4,2,0,6,3,2,5};
+        // int leftmax[]=new int[height.length];
+        // int rightmax[]=new int[height.length];
+        // leftmax[0]=height[0];
+        // for (int i = 1; i < leftmax.length; i++) {
+        //     leftmax[i]=Math.max(leftmax[i-1],height[i]);
+        // }
+        // rightmax[rightmax.length-1]=height[height.length-1];
+        // for (int i = rightmax.length-2; i >=0;i--) {
+        //     rightmax[i]=Math.max(rightmax[i+1],height[i]);
+        // }
+        // int TrapWater=0;
+        // for (int i = 0; i < height.length; i++) {
+        //     TrapWater+=(Math.min(leftmax[i],rightmax[i])-height[i]);
+        // }
+        // System.out.println("TrapWater is "+TrapWater);
+
+        // Selling Price 
+        int prices[]={7,1,5,3,6,4};
+        int buyPrice=Integer.MAX_VALUE;
+        int maxProfit=0;
+        for (int i = 0; i < prices.length; i++) {
+            if(buyPrice<prices[i]){
+                int profit=prices[i]-buyPrice;
+                maxProfit=Math.max(maxProfit,profit);
+            }else{
+                buyPrice=prices[i];
+            }
+        }
+        System.out.println("Max Profit "+maxProfit);
     }
 }
