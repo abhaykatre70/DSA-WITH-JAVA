@@ -1,6 +1,4 @@
 
-
-
 public class revision {
 
     static public void main(String[] args) {
@@ -421,7 +419,6 @@ public class revision {
         //     }
         //     System.out.println("");
         // }
-
         // The Number Pattern
         // int n=4;
         // for (int i = 0; i < 2*n-1; i++) {
@@ -435,7 +432,6 @@ public class revision {
         //     }
         //     System.out.println("");
         // } 
-
         //GCD or HCF
         // int a=15,b=20;
         // int n1=a,n2=b;
@@ -461,16 +457,90 @@ public class revision {
         //     temp/=10;
         // }
         // System.out.println("is Armstrong : "+(n==sum));
+        //Print all Divisors of a given Number
+        // int n=36;
+        // for (int i = 1; i*i <= n; i++) {
+        //     if(n%i==0){
+        //         System.out.print(i+" ");
+        //         if(i!=n/i){
+        //             System.out.print(n/i+" ");
+        //         }
+        //     }
+        // }
+        //pairs in an array
+        // int arr[]={2,4,6,8,10};
+        // int totalpair=0;
+        // for (int i = 0; i < arr.length; i++) {
+        //     int curr=i;
+        //     for (int j = i+1; j < arr.length; j++) {
+        //         System.out.print("("+arr[curr]+","+arr[j]+")");
+        //         totalpair++;
+        //     }
+        //     System.out.println("");
+        // }
+        // System.out.println("Total pair :"+totalpair);
+        //print subarray
+        //     int arr[]={2,4,6,8,10};
+        //     int totalpair=0;
+        //     for (int i = 0; i < arr.length; i++) {
+        //         for (int j = i; j < arr.length; j++) {
+        //             for (int k = i; k <=j; k++) {
+        //                 System.out.print(arr[k]+" ");
+        //             }
+        //             totalpair++;
+        //             System.out.print(" ");
+        //         }
+        //         System.out.println("");
+        //     }
+        //     System.out.println("Total pair :"+totalpair);
+
+        //max subarray
+        //     int arr[] = {1, -2, 6, -1, 3};
+        //     int max=Integer.MIN_VALUE;
+        //     for (int i = 0; i < arr.length; i++) {
+        //         for (int j = i; j < arr.length; j++) {
+        //             int currentvalue=0;
+        //             for (int k = i; k <=j; k++) {
+        //                 currentvalue+=arr[k];
+        //             }
+        //             if(max<currentvalue){
+        //                 max=currentvalue;
+        //             }
+        //         }
+        //     }
+        //     System.out.println("Max sum : "+max);
+
+
+        //max sum subarray optimized code O(n2)
+        // int arr[]={1,-2,6,-1,3};
+        // int currsum=0;
+        // int max=Integer.MIN_VALUE;
+        // int prefix[]=new int[arr.length];
+        // prefix[0]=arr[0];
+        // for (int i = 1; i < prefix.length; i++) {
+        //     prefix[i]=prefix[i-1]+arr[i];
+        // }
+        // for (int i = 0; i < prefix.length; i++) {
+        //     int start=i;
+        //     for (int j = i; j < prefix.length; j++) {
+        //         int end=j;
+        //         currsum=i==0?prefix[end]:prefix[end]-prefix[start-1];
+        //         if(max<currsum){
+        //             max=currsum;
+        //         }
+        //     }
+        // }
+        // System.out.println("Max sum : "+max);
+
+        //Kadane's Algorithm
+        // int arr[]={-2,-3,4,-1,-2,1,5,-3};
+        // int max=arr[0];
+        // int currsum=arr[0];
+        // for (int i = 1; i < arr.length; i++) {
+        //     currsum=Math.max(arr[i],currsum+arr[i]);
+        //     max=Math.max(currsum, max);
         
-        Print all Divisors of a given Number
-        int n=36;
-        for (int i = 1; i*i <= n; i++) {
-            if(n%i==0){
-                System.out.print(i+" ");
-                if(i!=n/i){
-                    System.out.print(n/i+" ");
-                }
-            }
-        }
+        // }
+        // System.out.println("Max sum:"+max);
     }
 }
